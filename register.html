@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+<body>
+  <div class="regform"><h1>Registration Page</h1></div>
+  <div id="error_message"></div>
+  <div class="main">
+    <form
+      id="myform"
+      action="welcome.php"
+      method="post"
+      onsubmit="return validation()"
+    >
+      <div id="name">
+        <h2 class="name">Name</h2>
+        <input
+          id="fname"
+          class="fname"
+          type="text"
+          name="first_name"
+          placeholder="firstname"
+        />
+        <label class="flabel">first name</label><br />
+        <input
+          id="lname"
+          class="lname"
+          type="text"
+          name="last_name"
+          placeholder="lastname"
+        />
+        <label class="llabel">last name</label>
+      </div>
+      <h2 class="name">Email</h2>
+      <input
+        id="email"
+        class="email"
+        type="email"
+        name="email"
+        required
+        placeholder="xyz@gmail.com"
+      />
+      <h2 class="name">Contact</h2>
+      <input
+        id="contact"
+        class="code"
+        type="text"
+        name="contact"
+        placeholder="Enter No"
+      />
+
+      <h2 class="name">Address</h2>
+      <input
+        id="address"
+        class="address"
+        type="text"
+        name="address"
+        placeholder="address line "
+      />
+
+      <h2 class="name">Street</h2>
+      <input
+        id="street"
+        class="street"
+        type="text"
+        name="Street"
+        placeholder=" street name"
+      />
+
+      <h2 class="name1">City</h2>
+      <input
+        id="city"
+        class="city"
+        type="text"
+        name="address"
+        placeholder="your city"
+      />
+
+      <h2 class="name2">Pincode</h2>
+      <input
+        id="pincode"
+        class="pincode"
+        type="text"
+        name="pincode"
+        placeholder="pincode"
+      />
+
+      <h2 class="name3">State</h2>
+      <input
+        id="state"
+        class="state"
+        type="text"
+        name="state"
+        placeholder="your state"
+      />
+
+      <h2 class="name4">Country</h2>
+      <input
+        id="country"
+        class="country"
+        type="text"
+        name="country"
+        placeholder="your country"
+      />
+
+      <h2 class="name5">Document:</h2>
+      <input
+        type="file"
+        id="myFile"
+        name="filename"
+        accept="application/pdf, application/vnd.ms-excel"
+      />
+      <input class="btn1" type="submit" value="Upload" />
+
+      <input class="btn" type="submit" value="Submit" name="Submit" />
+    </form>
+  </div>
+</body>
+</html>

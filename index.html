@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitnessForSUB</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1170px)"
+      href="phonework.css"
+    />
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Grandstander&family=Inconsolata:wght@600&family=Long+Cang&family=Source+Code+Pro:wght@500&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> -->
+    <script type="text/javascript">
+      function BMI() {
+        var h = document.getElementById("h").value;
+        var w = document.getElementById("w").value;
+        var bmi = w / (((h / 100) * h) / 100);
+        var bmio = bmi.toFixed(2);
+
+        document.getElementById("result").innerHTML = "Your BMI is " + bmio;
+      }
+    </script>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+    
+    <script>
+      var $ = function (id) {
+        return document.getElementById(id);
+      };
+      function msystem() {
+        if ($("msw").value == "metric") {
+          $("thw").innerHTML = " (Cms)";
+        } else {
+          $("thw").innerHTML = " (inches)";
+        }
+      }
+      function bweight() {
+        var ms = $("msw").value;
+        var sex = $("sw").value;
+        var height = $("hw").value;
+        if (height == null || height.length == 0) {
+          $("ibw").value = "Pl. enter data.";
+        } else {
+          $("ibw").value = "";
+        }
+        if (ms == "metric" && height > 0 && sex == "m") {
+          $("ibw").value =
+            Math.round(56.2 * 1 + (height * 0.39 - 152.4 * 0.39) * 1.41) * 1 +
+            " Kgs";
+        } else if (ms == "metric" && height > 0 && sex == "f") {
+          $("ibw").value =
+            Math.round(53.1 * 1 + (height * 0.39 - 152.4 * 0.39) * 1.36) * 1 +
+            " Kgs";
+        } else if (ms == "us" && height > 0 && sex == "m") {
+          $("ibw").value =
+            Math.round(56.2 * 2.20462 + (height * 1 - 60) * 1.41 * 2.20462) *
+              1 +
+            " lbs";
+        } else if (ms == "us" && height > 0 && sex == "f") {
+          $("ibw").value =
+            Math.round(53.1 * 2.20462 + (height * 1 - 60) * 1.36 * 2.20462) *
+              1 +
+            " lbs";
+        }
+        if (ms == "metric" && height > 0) {
+          $("ibw1").value =
+            Math.round(18.5 * ((height * height) / 10000)) +
+            " Kgs-" +
+            Math.round(25 * ((height * height) / 10000)) +
+            " Kgs";
+        } else if (ms == "us" && height > 0) {
+          $("ibw1").value =
+            Math.round((18.5 * (height * height)) / 703) +
+            " lbs-" +
+            Math.round((25 * (height * height)) / 703) +
+            " lbs";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active"> FitnessForSUB </a>
+      <a href="index.html">Home</a>
+      <a href="Workouts.html">Workouts</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="meditation.html">Meditation</a>
+      <a href="contact.html">Contact Us</a>
+      <a
+        href="javascript:void(0);"
+        style="font-size: 15px"
+        class="icon"
+        onclick="myFunction()"
+        >&#9776;</a
+      >
+    </div>
+
+    <!-- Welcome -->
+
+    <section id="home">
+      <h1 class="h-primary">Welcome to FitnessForSUB.com</h1>
+      <p>
+        “If you don’t make time for exercise, you’ll probably have to make time
+        for illness.”
+      </p>
+      <p>Eat.Exercise.Sleep.Repeat.</p>
+    </section>
+
+    <!-- Benefits Section Starts Here -->
+
+    <section id="hom">
+      <section id="services-container">
+        <h1 class="h-primary center">Why FitnessForSUB?</h1>
+
+        <div id="services">
+          <div class="box">
+            <details>
+              <summary>
+                <h2 class="h-secondary center">
+                  How lockdown has affect on our health?
+                </h2>
+              </summary>
+              <p class="center">
+                The lockdown applied to three main areas: physical movement out
+                of the home, social distancing when outside the home, and
+                restricted availability of most public services while sparing
+                essential services. There was a sudden and drastic alteration in
+                the daily routine, with many millions stranded in boarding
+                houses and rental apartments, without work and far from home.
+              </p>
+            </details>
+          </div>
+
+          <div class="box">
+            <details>
+              <summary>
+                <h2 class="h-secondary center">Why to take care of Health?</h2>
+              </summary>
+              <p class="center">
+                Health problems, even minor ones, can interfere with or even
+                overshadow other aspects of your life. Even relatively minor
+                health issues such as aches, pains, lethargy, and indigestion
+                take a toll on your happiness and stress levels. One way to
+                improve your ability to cope with stress and feel better is to
+                make a commitment to healthier habits. Poor health habits can
+                add stress to your life and also play a role in how well you are
+                able to cope with stress. The stress that comes from poor health
+                is significant. Health challenges also affect other areas of
+                your life. Health problems can make daily tasks more
+                challenging, create financial stress, and even jeopardize your
+                ability to earn a living. Stress itself can exacerbate health
+                issues from the common cold to more serious conditions and
+                diseases,so maintaining healthy habits can pay off in the long
+                run.
+              </p>
+            </details>
+          </div>
+
+          <div class="box">
+            <details>
+              <summary>
+                <h2 class="h-secondary center">
+                  Why taking care of our body necessary in 21st century?
+                </h2>
+              </summary>
+              <p class="center">
+                1. Exercise controls weight 2. Exercise combats health
+                conditions and diseases 3. Exercise improves mood 4. Exercise
+                boosts energy 5. Exercise promotes better sleep 6. Exercise puts
+                the spark back into your sex life 7. Exercise can be fun … and
+                social!
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calculator Section starts Here -->
+      <section id="client-section">
+        <section id="calculatorc,-container">
+          <h1 class="h-primary center">Our Fitness Calculator</h1>
+          <div id="calculator">
+            <div class="box">
+              <h2>BMI Calculator</h2>
+              <p class="text">Height(in cm)</p>
+              <input type="text" id="h" />
+              <p class="text">Weight(in kg)</p>
+              <input type="text" id="w" />
+              <p id="result"></p>
+              <button id="hw" onClick="BMI()">Calculate</button>
+              <p id="info">A healthy BMI ranges between 19 and 25.</p>
+              <p class="text">Weight(in kg)</p>
+              <!-- <p class="text">Weight(in kg)</p>
+                <p class="text">Weight(in kg)</p>
+                <p class="text">Weight(in kg)</p>
+                <p class="text">Weight(in kg)</p>
+                <p class="text">Weight(in kg)</p>
+                <p class="text">Weight(in kg)</p>               -->
+            </div>
+
+            <div class="box">
+              <p><strong>Ideal Body Weight Calculator</strong></p>
+              <form name="iw">
+                <table class="main">
+                  <col class="w60" />
+                  <col class="w40" />
+                  <tr>
+                    <td>Measuring System</td>
+                    <td>
+                      <select id="msw" onchange="msystem();">
+                        <option value="metric">Metric (Kgs, Cms)</option>
+                        <option value="us">US (lbs, inches)</option>
+                      </select>
+                      <tr>
+                        <td>Sex</td>
+                        <td>
+                          <select id="sw">
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                          </select>
+                          <tr>
+                            <td>Height <span id="thw">(Cms)</span></td>
+                            <td>
+                              <input id="hw" />
+                              <tr>
+                                <td><button type="reset">Reset</button></td>
+                                <td>
+                                  <button type="button" onclick="bweight();">
+                                    Submit
+                                  </button>
+                                  <tr>
+                                    <td>As per D R Miller Formula</td>
+                                    <td>
+                                      <input id="ibw" class="op" />
+                                      <tr>
+                                        <td>As per WHO recommendations</td>
+                                        <td>
+                                          <input id="ibw1" class="op" />
+                                          <tr>
+                                            <td colspan="2" class="ac">
+                                              This Calculator is suitable only
+                                              for Adults over 18 years of age.
+                                            </td>
+                                          </tr>
+                                        </td>
+                                      </tr>
+                                    </td>
+                                  </tr>
+                                </td>
+                              </tr>
+                            </td>
+                          </tr>
+                        </td>
+                      </tr>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+
+          </div>
+          <!--End of div id=calculator-->
+        </section>
+
+        <!-- <h1 class="h-primary center"><a href="nutrition.html">Nutrition</a></h1> -->
+        <!-- <a href="nutrition.html"><img src="img/vegan1.JPG" alt="Nutrition IMG" width="1515" height="388" ></a> -->
+        <h2 class="h-secondary center">
+          <a href="nutrition.html">Nutrition</a>
+        </h2>
+        <p class="center">
+          Nutrition can be defined as food at work in the body. It can also be
+          defined as the process by which the organism ingests, digests,
+          absorbs, transports and utilizes nutrients and disposes of their
+          end-products. Nutrition is an important aspect of each individual’s
+          life. It is imperative to ensure that each one of us gets a balanced
+          nutritional diet with all components that are needed in our stage of
+          life. Hence it is important to consult a nutrition expert to ensure
+          that you are on the right nutritional track.
+        </p>
+        <br />
+        <h2 class="h-secondary center">
+          <a href="Workouts.html">Importance of Exercise</a>
+        </h2>
+        <p class="center">
+          When life gets busy, it can put a strain on your fitness. Instead of
+          skipping exercise altogether, take just 10 minutes out of your day to
+          do an effective workout and help you feel a lot better. The truth is
+          you can actually get a great workout in a short amount of time! But it
+          has to be done correctly: You need the right exercises with the right
+          format to crank up your metabolism, boost your fat loss and build lean
+          muscle.
+        </p>
+        <br /><br />
+      </section>
+    </section>
+  </body>
+</html>
